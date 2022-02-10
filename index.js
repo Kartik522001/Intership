@@ -1,5 +1,10 @@
-const calc = require('./calc');
+const express = require('express');
 
-calc.addition(12,12);
-calc.sub(20,12);
+const app = express();
 
+app.get('/',function(req,res){
+    res.send('Hello, world');
+})
+
+app.listen(3000);
+console.log('Server Started');
